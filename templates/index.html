@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regression Model Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>Regression Model Predictor</h1>
+
+    <div class="container">
+
+        <!-- Model Selection -->
+        <label for="model">Choose Model:</label>
+        <select id="model">
+            <option value="ridge">Ridge</option>
+            <option value="lasso">Lasso</option>
+            <option value="elasticnet">ElasticNet</option>
+            <option value="linear">Linear Regression</option>
+        </select>
+
+        <h2>Enter Features</h2>
+
+        <!-- Row 1 -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="0" max="120" step="1">
+            </div>
+            <div class="form-group">
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" id="bmi" name="bmi" min="10" max="60" step="0.1">
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="bp">BP:</label>
+                <input type="number" id="bp" name="bp" min="50" max="200" step="1">
+            </div>
+            <div class="form-group">
+                <label for="s1">S1:</label>
+                <input type="number" id="s1" name="s1" step="any">
+            </div>
+            <div class="form-group">
+                <label for="s2">S2:</label>
+                <input type="number" id="s2" name="s2" step="any">
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="s3">S3:</label>
+                <input type="number" id="s3" name="s3" step="any">
+            </div>
+            <div class="form-group">
+                <label for="s4">S4:</label>
+                <input type="number" id="s4" name="s4" step="any">
+            </div>
+            <div class="form-group">
+                <label for="s5">S5:</label>
+                <input type="number" id="s5" name="s5" step="any">
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="s6">S6:</label>
+                <input type="number" id="s6" name="s6" step="any">
+            </div>
+        </div>
+
+        <button onclick="predict()">Predict</button>
+
+       <div id="result" class="result-box">
+        Prediction will appear here...</div>
+
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
