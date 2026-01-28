@@ -3,6 +3,7 @@
 <head>
     <title>Regression Model Predictor</title>
     <link rel="stylesheet" href="/static/style.css">
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -26,6 +27,7 @@
             <div class="form-group">
                 <label for="age">Age:</label>
                 <input type="number" id="age" name="age" min="0" max="120" step="1">
+            
             </div>
             <div class="form-group">
                 <label for="sex">Sex:</label>
@@ -37,6 +39,7 @@
             <div class="form-group">
                 <label for="bmi">BMI:</label>
                 <input type="number" id="bmi" name="bmi" min="10" max="60" step="0.1">
+                <p>Normal Range: 18.5--24.9</p>
             </div>
         </div>
 
@@ -45,14 +48,17 @@
             <div class="form-group">
                 <label for="bp">BP:</label>
                 <input type="number" id="bp" name="bp" min="50" max="200" step="1">
+                <p>Normal Range: 80--120</p>
             </div>
             <div class="form-group">
                 <label for="s1">S1:</label>
                 <input type="number" id="s1" name="s1" step="any">
+                <p>Normal Range: 100--150</p>
             </div>
             <div class="form-group">
                 <label for="s2">S2:</label>
                 <input type="number" id="s2" name="s2" step="any">
+                <p>Normal Range: 80--120</p>
             </div>
         </div>
 
@@ -61,14 +67,17 @@
             <div class="form-group">
                 <label for="s3">S3:</label>
                 <input type="number" id="s3" name="s3" step="any">
+                <p>Normal Range: 20--50</p>
             </div>
             <div class="form-group">
                 <label for="s4">S4:</label>
                 <input type="number" id="s4" name="s4" step="any">
+                <p>Normal Range: 70--100</p>
             </div>
             <div class="form-group">
                 <label for="s5">S5:</label>
                 <input type="number" id="s5" name="s5" step="any">
+                <p>Normal Range: 0.5--1.5</p>
             </div>
         </div>
 
@@ -77,6 +86,7 @@
             <div class="form-group">
                 <label for="s6">S6:</label>
                 <input type="number" id="s6" name="s6" step="any">
+                <p>Normal Range: 0.2--0.7</p>
             </div>
         </div>
 
@@ -85,8 +95,9 @@
        <div id="result" class="result-box">
         Prediction will appear here...</div>
 
+    <div class="chart-container">
+      <canvas id="coefChart"></canvas>
     </div>
-
     <script src="/static/app.js"></script>
 </body>
 </html>
